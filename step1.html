@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/datepicker.css">
+    <link rel="stylesheet" href="./css/new.css">
+    <script src="./js/date.js" defer></script>
+    <title>Steps-Form</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+
+            <!-- Форма для изменения условий займа -->
+            <form class="info-container info-container--form" loan-percent="1" discount-loan-percent="0">
+                <div class="info-item loan-sum">
+                    Заявка на:
+                    <div class="wrapper">
+                        <input id="money-input" class="info-input input-count" name="money" type="text" readonly value="15 000" readonly disabled>
+                        <span class="symbol">₽</span> 
+                    </div>
+                </div>
+                <div class="info-item loan-date">
+                    До:(включительно) 
+                    <div class="wrapper">
+                        <input id="date-input" name="period" value="5 января" class="info-input input-date" readonly disabled>
+                    </div>
+                </div>
+                <div class="info-item loan-return">
+                    <span class="sub-heading">
+                        Вы возвращаете: 
+                    </span>
+                    <div class="no-discount-sum text-gray">
+                        <input value="15000" class="count-sum info-input" readonly/>
+                        <span class="symbol">₽</span> 
+                    </div>
+                    <div class="discount-sum text-orange text-bold">
+                        <input value="56000" class="count-sum info-input" readonly/>
+                        <span class="symbol">₽</span> 
+                    </div>
+                    <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.279785" width="37" height="23" rx="5" fill="#21CA50"/>
+                        <path d="M17.16 15.9038C16.424 16.9491 15.384 17.4718 14.04 17.4718C12.696 17.4718 11.6507 16.9491 10.904 15.9038C10.168 14.8478 9.8 13.4398 9.8 11.6798C9.8 9.91978 10.168 8.51712 10.904 7.47178C11.6507 6.41578 12.696 5.88778 14.04 5.88778C15.384 5.88778 16.424 6.41578 17.16 7.47178C17.9067 8.51712 18.28 9.91978 18.28 11.6798C18.28 13.4398 17.9067 14.8478 17.16 15.9038ZM11.736 15.1518C12.2907 15.9731 13.0587 16.3838 14.04 16.3838C15.0213 16.3838 15.784 15.9731 16.328 15.1518C16.8827 14.3305 17.16 13.1731 17.16 11.6798C17.16 10.1865 16.8827 9.02912 16.328 8.20778C15.784 7.38645 15.0213 6.97578 14.04 6.97578C13.0587 6.97578 12.2907 7.38645 11.736 8.20778C11.192 9.02912 10.92 10.1865 10.92 11.6798C10.92 13.1731 11.192 14.3305 11.736 15.1518ZM22.1736 10.6878C21.4803 10.6878 20.899 10.4585 20.4296 9.99978C19.9603 9.53045 19.7256 8.95978 19.7256 8.28778C19.7256 7.61578 19.9603 7.05045 20.4296 6.59178C20.899 6.12245 21.4803 5.88778 22.1736 5.88778C22.867 5.88778 23.4483 6.12245 23.9176 6.59178C24.387 7.05045 24.6216 7.61578 24.6216 8.28778C24.6216 8.95978 24.3923 9.53045 23.9336 9.99978C23.475 10.4585 22.8883 10.6878 22.1736 10.6878ZM21.1496 9.31178C21.4163 9.58912 21.7576 9.72778 22.1736 9.72778C22.5896 9.72778 22.931 9.58912 23.1976 9.31178C23.4643 9.03445 23.5976 8.69312 23.5976 8.28778C23.5976 7.88245 23.4643 7.54112 23.1976 7.26378C22.931 6.98645 22.5896 6.84778 22.1736 6.84778C21.7576 6.84778 21.4163 6.98645 21.1496 7.26378C20.883 7.54112 20.7496 7.88245 20.7496 8.28778C20.7496 8.69312 20.883 9.03445 21.1496 9.31178ZM20.2856 15.7598L27.7896 7.32778L28.4776 7.71178L20.9576 16.1438L20.2856 15.7598ZM28.4456 16.7838C27.9763 17.2425 27.395 17.4718 26.7016 17.4718C26.0083 17.4718 25.427 17.2425 24.9576 16.7838C24.4883 16.3145 24.2536 15.7438 24.2536 15.0718C24.2536 14.3998 24.4883 13.8345 24.9576 13.3758C25.427 12.9065 26.0083 12.6718 26.7016 12.6718C27.395 12.6718 27.9763 12.9065 28.4456 13.3758C28.915 13.8345 29.1496 14.3998 29.1496 15.0718C29.1496 15.7438 28.915 16.3145 28.4456 16.7838ZM25.6776 16.0958C25.9443 16.3731 26.2856 16.5118 26.7016 16.5118C27.1176 16.5118 27.459 16.3731 27.7256 16.0958C27.9923 15.8185 28.1256 15.4771 28.1256 15.0718C28.1256 14.6665 27.9923 14.3251 27.7256 14.0478C27.459 13.7705 27.1176 13.6318 26.7016 13.6318C26.2856 13.6318 25.9443 13.7705 25.6776 14.0478C25.411 14.3251 25.2776 14.6665 25.2776 15.0718C25.2776 15.4771 25.411 15.8185 25.6776 16.0958Z" fill="white"/>
+                    </svg>    
+                </div>
+                <button class="btn change-btn">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.02908 14H1.57558C1.42293 14 1.27653 13.9394 1.16858 13.8314C1.06064 13.7235 1 13.5771 1 13.4244V10.2093C1 10.1337 1.01489 10.0589 1.04381 9.98906C1.07274 9.91923 1.11514 9.85578 1.16858 9.80233L9.80233 1.16858C9.91028 1.06064 10.0567 1 10.2093 1C10.362 1 10.5084 1.06064 10.6163 1.16858L13.8314 4.38367C13.9394 4.49161 14 4.63801 14 4.79067C14 4.94332 13.9394 5.08972 13.8314 5.19767L5.02908 14ZM5.02908 14L13.6627 14M5.02908 14L1.03654 10.0075M7.907 3.06393L11.9361 7.09302" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>
+                        Изменить
+                    </span>     
+                </button>
+            </form>
+            <div class="form-hgroup">
+                <h1 class="heading--form">
+                    Решение за 1 минуту по паспорту
+                </h1>
+                <h2 class="sub-heading--form">Несколько простых шагов и деньги у Вас на карте</h2>
+            </div>
+
+            <!-- Первый шаг формы -->
+            <form class="step-form step1">
+                <div class="form-row">
+                    <input id="name" name="fio" type="text" class="step-form--input form--input" value="" success-percent="5" counted="false">
+                    <span class="step-label">ФИО</span>
+                    <span class="error-message">Разрешен ввод только кириллицы</span>
+                </div>
+                <div class="form-row">
+                    <input id="birthday-input" name="birthday" type="text" class="step-form--input form--input " success-percent="2" counted="false">
+                    <span class="step-label">Дата рождения</span>
+                    <span class="error-message">Мы выдаем займы лицам от 18 до 70 лет</span>
+                    <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 1V5M6 1V5M1 9H23M7.5 13.9996H11L9 16.4996C9.32885 16.4996 9.65263 16.5807 9.94266 16.7357C10.2327 16.8907 10.48 17.1148 10.6628 17.3882C10.8455 17.6616 10.958 17.9759 10.9903 18.3031C11.0226 18.6304 10.9737 18.9606 10.848 19.2644C10.7222 19.5683 10.5235 19.8365 10.2694 20.0452C10.0153 20.2539 9.71358 20.3967 9.39108 20.461C9.06857 20.5253 8.73519 20.5091 8.42045 20.4138C8.10571 20.3185 7.81932 20.1471 7.58665 19.9147M14 15.4996L16 13.9996V20.4996M2 3H22C22.5523 3 23 3.44772 23 4V24C23 24.5523 22.5523 25 22 25H2C1.44772 25 1 24.5523 1 24V4C1 3.44772 1.44772 3 2 3Z" stroke="#AFAFAF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                </div>
+                <div class="form-row">
+                    <input id="phone" name="phone" type="text" class="step-form--input form--input" success-percent="10" counted="false">
+                    <span class="error-message">Введите телефон в правильном формате</span>
+                    <span class="step-label">Мобильный телефон</span>
+                </div>
+                <button class="btn-submit">Отправить заявку</button>
+                <div class="checkbox">
+                    <label class="checkbox-label">
+                        <input id="checkbox-required" name="loan-conditions" type="checkbox" class="checkbox-input form--input">
+                        <div class="checkbox-notification">
+                            Это обязательное поле
+                        </div>
+                        <div class="checkbox-visible"></div>
+                        <span class="checkbox-text"> Я ознакомлен и согласен <a href="#" class="agreement--link"> со следующим</a></span>
+                    </label>
+                </div>
+                <div class="diagram-block">
+                    <div class="diagram progress">
+                        <input type="hidden" value="0" class="data-percent">
+                        <div class="piece left"></div>
+                        <div class="piece right" style="transform: rotate(194.4deg);"></div>
+                        <div class="diagram-text text">
+                            <div class="success-percent">
+                                <b></b>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="diagram-note">
+                        <span> <b>  Вероятность получения займа. </b> </span><br>
+                        <span>  Заполняя анкету вы увеличиваете возможность получения займа. </span><br>
+                        <span> <b> +10% за электронную почту</b></span><br>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./lib/jquery.mask.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mask.js"></script>
+</body>
+</html>

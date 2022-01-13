@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/new.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header bg-gray">
+        <div class="container">
+            <div class="header-mobile">
+                <div class="header-mobile-left">
+                    <svg class="burger-btn" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1C0 0.447715 0.447715 0 1 0H22C22.5523 0 23 0.447715 23 1C23 1.55228 22.5523 2 22 2H1C0.447715 2 0 1.55228 0 1Z" fill="#282735"/>
+                        <path d="M0 8C0 7.44772 0.447715 7 1 7H22C22.5523 7 23 7.44772 23 8C23 8.55228 22.5523 9 22 9H1C0.447715 9 0 8.55228 0 8Z" fill="#282735"/>
+                        <path d="M0 15C0 14.4477 0.447715 14 1 14H22C22.5523 14 23 14.4477 23 15C23 15.5523 22.5523 16 22 16H1C0.447715 16 0 15.5523 0 15Z" fill="#282735"/>
+                    </svg>    
+                    <div class="burger-logo">
+                        <img src="./img/logo.svg" alt="">
+                    </div>
+                </div>
+                <div class="header-mobile-right">
+                    <a class="header-mobile-tel" href="tel:88003333073">8 800 333 30 73</a>
+                </div>
+            </div>
+            <div class="header-desktop">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <img src="./img/logo-big.svg" alt="">
+                    </div>
+                    <ul class="header-nav">
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Партнёры</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Условия</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="#" class="header-nav-link">Контакты</a>
+                        </li>                    
+                    </ul>
+                </div>
+                <div class="header-right">
+                    <div class="header-social">
+                        <a  class="header-social--" href="">
+                            <img src="./img/tg.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/wa.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./img/vi.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header-contacts">
+                       <p>Возникли вопросы?</p>
+                       <p> Звони: <a href="tel:88003333073">8 800 333 30 73</a></p>
+                    </div>
+                    <div class="header-login">
+                       <a class="btn" href="#">Личный кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="section show-mobile-section  bg-gray">
+        <div class="container">
+            <div class="notion-banner notion-main">
+                <h2 class="notion-heading">Первый заём — бесплатно</h2>
+                <div class="notion-text">
+                    <div class="conditions">
+                        на срок до 7 дней 
+                        на сумму до 15 000 ₽
+                    </div>
+                    <div class="notion-item">
+                        <div class="notion-zero">0</div>
+                        <div class="notion-percent">%</div>
+                    </div>
+                </div>
+                <div class="part-orange"></div>
+            </div>
+        </div>
+    </div>
+    <section class="section  bg-gray main-section">
+        <div class="container">
+            <div class="main-wrapper">
+                <div class="main-hgroup">
+                    <h1 class="main-heading">
+                        <span class="first-part">Первый заём</span>
+                        <span class="second-part">под 0%</span>
+                        <span class="third-part">на 7 дней за регистрацию!*</span>
+                    </h1>
+                    <p class="main-hgroup-notion">
+                        * При условии полного погашения займа в срок. При повторном займе на сумму <b>до 15 000 ₽</b>, деньги выдаются <b>под 1% в день</b>
+                    </p>
+                    <div class="scroll-to">
+                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20.5" cy="20.5" r="20" stroke="#2C2B39"/>
+                            <path d="M20.5 11.5V26.5M20.5 26.5L25 22M20.5 26.5L16 22" stroke="#2C2B39"/>
+                        </svg>
+                        <span>Какие у нас займы</span>    
+                    </div>
+                </div>
+                <div class="boy-bg">
+    
+                </div>
+                <div class="form-wrapper">
+                    <form method="get" class="range">
+                        <div class="form-group range__slider">
+                          <div class="loan-amount-value">
+                             <div class="action-name">Выберите сумму: </div>
+                             <div class="count-wrapper">
+                                <input type="text" class="count"></input>
+                                <span>₽</span>
+                             </div>
+                          </div>
+                          <div class="input-wrapper">
+                                <svg class="input-controll controll-left" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
+                                    <rect x="6" y="9" width="8" height="2" fill="white"/>
+                                </svg>
+        
+                
+                              <input class="loan-amount" name="amount" type="range" step="1">
+                              <svg class="input-controll controll-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
+                                    <path d="M6 9H14V11H6V9Z" fill="white"/>
+                                    <path d="M9 14L9 6L11 6L11 14H9Z" fill="white"/>
+                              </svg>
+        
+                          </div>
+                           <div class="min-max">
+                            <span class="min-value">1000</span>
+                            <span class="max-value">15000</span>
+                          </div>
+                        </div>
+                        <div class="form-group range__slider">
+                          <div class="loan-term-value">
+                             <div class="action-name">Выберите срок: </div>
+                             <div class="count-wrapper">
+                                <input style="" type="text" class="count"></input>
+                                <span>дней</span>
+                             </div>
+                          </div>
+                          <div class="input-wrapper">
+                          <svg class="input-controll controll-left" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
+                                    <rect x="6" y="9" width="8" height="2" fill="white"/>
+                                </svg>
+        
+                
+                                <input class="loan-term"  type="range" step="1" value="10">
+                              <svg class="input-controll controll-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
+                                    <path d="M6 9H14V11H6V9Z" fill="white"/>
+                                    <path d="M9 14L9 6L11 6L11 14H9Z" fill="white"/>
+                              </svg>
+                          </div>
+                          <div class="min-max">
+                            <span class="min-value">7</span>
+                            <span class="max-value">16</span>
+                          </div>
+                        </div>
+                        <div class="result-section">
+                          <div class="loan-sum">
+                             <p>Занимаете:</p>
+                             <span class="sum-count">
+                                 <b>
+                                 <span class="count-sum">1 000 </span> 
+                                 </b>
+                                    <span class="symbol">₽</span> 
+                             </span>
+                          </div>
+                          <div class="result-date">
+                            <p>Сроком до:</p>
+                            <input style="max-width: 80px" class="date" name="period" readonly value="15 сентября"/>
+                          </div>
+                          <div class="return-amount">
+                              <p>Вернуть:</p>
+                              <div>
+                                <div class="sum">
+                                  <div class="no-discount-sum">
+                                    <span class="count-sum_percent">1070</span> 
+                                    <span class="symbol">₽</span> 
+                                  </div>
+                                  <div class="discount-sum">
+                                    <span class="count-sum">1000</span> 
+                                    <span class="symbol">₽</span> 
+                                  </div>
+                                   <div class="percent"><span class="percent-count">0</span><span class="symbol">%</span> </div>
+                                </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group border-group">
+                            <button type="submit" class="mobile-submit-btn btn-submit btn _orange text-white border-round no-border">
+                              Получить бесплатно
+                            </button>
+                            <span class="promotion">
+                              Одобряем 98% заявок при оформлении займа через госуслуги
+                            </span>
+                        </div>
+                       <div class="form-group qa-group">
+                            <a href="https://www.boostra.ru/files/docs/zaim_0.pdf" class="qa-link text-underline">
+                              Положение Акции со скидкой 100% для новых клиентов
+                            </a>
+                            <a href="#" class="qa-link text-underline">
+                              А что если я не успеваю вернуть деньги вовремя
+                            </a>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-heading">Как это работает</h2>
+            <ul class="how-to--items">
+                <li class="how-to--item">
+                    <div class="icon-wrapper">
+                        <img src="./img/doc.svg" alt="">
+                    </div>
+                    <div class="how-to--text">
+                        <h3>Оформите заявку</h3>
+                        <p>У вас это займет не более 10 минут</p>
+                    </div>
+                </li>
+                <li class="how-to--item">
+                    <div class="icon-wrapper">
+                        <img src="./img/time.svg" alt="">
+                    </div>
+                    <div class="how-to--text">
+                        <h3>Дождитесь ответа</h3>
+                        <p>Мы дадим ответ в течение 5 минут</p>
+                    </div>
+                </li>
+                <li class="how-to--item">
+                    <div class="icon-wrapper">
+                        <img src="./img/money.svg" alt="">
+                    </div>
+                    <div class="how-to--text">
+                        <h3>Мгновенное получение денег</h3>
+                        <p>На банковскую карту</p>
+                    </div>
+                </li>
+                <li class="how-to--item readmore-item">
+                    <p>
+                      <b>Займы онлайн </b> — это аналог кредита от 1 000 до 15 000 рублей, на срок до 16 дней, 
+                      c процентной ставкой от 0,00% до 1% в день, с проведением всей сделки удаленно через интернет. 
+                      Деньги заемщик получает мгновенно после одобрения заявки, которая подается онлайн. Займы выдают 
+                      Деньги заемщик получает мгновенно после одобрения заявки, которая подается онлайн. Займы выдают 
+                    </p>
+                    <div class="bottom-bar">
+                        <a href=""> 
+                            Читать до конца 
+                            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 0.5L6.5 6L12 0.5" stroke="#E5613E"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="notion-banner notion-middle">
+                <h2 class="notion-heading">Первый заём — бесплатно</h2>
+                <div class="notion-text">
+                    <div class="conditions">
+                        на срок до 7 дней 
+                        на сумму до 15 000 ₽
+                    </div>
+                    <div class="notion-item">
+                        <div class="notion-zero">0</div>
+                        <div class="notion-percent">%</div>
+                    </div>
+                </div>
+                <div class="part-orange"></div>
+            </div>
+            <div class="btn-block1">
+                <button class="btn-submit mobile-submit-btn">Получить бесплатно</button>
+                <p class="text-notion">*Доступно только для первого займа</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <p class="question-text">
+                Оформить заём можно круглосуточно, в выходные и праздники. 
+                Подать заявку вы можете не только с компьютера, 
+                но и с любого мобильного устройства
+            </p>
+            <ul class="question-list">
+                <li class="question-item">
+                    <a href="#">
+                        <span>Как получать на карту</span>
+                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
+                        </svg>    
+                    </a>
+                </li>
+                <li class="question-item">
+                    <a href="#">
+                        <span>Какие документы нужны</span>
+                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
+                        </svg>   
+                    </a>
+                </li>
+                <li class="question-item">
+                    <a href="#">
+                        <span>Какие еще требования к заёмщику</span>
+                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
+                        </svg>   
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer bg-gray">
+        <section class="section">
+            <div class="container">
+                <div class="footer-content--mobile">
+                    <div class="footer-part top-part">
+                        <div class="footer-promo">
+                            <div class="promo-part promo-top">
+                                <div class="promo-logo">
+                                    <img src="./img/logo-mini.svg" alt="">
+                                </div>
+                                <p class="promo-text">
+                                    Получите деньги еще быстрее
+                                    в нашем приложении. Скоро.
+                                </p>
+                            </div>
+                            <div class="promo-part promo-bottom">
+                                <img src="./img/playmarket.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="footer-nav">
+                            <li class="footer-nav--item">
+                                <a href="#" class="footer-nav--link">Информация</a>
+                            </li>
+                            <li class="footer-nav--item">
+                                <a href="#" class="footer-nav--link">   Документы</a>
+                            </li>
+                            <li class="footer-nav--item">
+                                <a href="#" class="footer-nav--link">COVID-19 поддержка клиентов</a>
+                            </li>
+                            <li class="footer-nav--item">
+                                <a href="#" class="footer-nav--link"> Контакты</a>
+                            </li>
+                            <li class="footer-nav--item">
+                                <a href="#" class="footer-nav--link">Войти в личный кабинет</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-part bottom-part">
+                        <div class="payment-systems">
+                            <ul class="payment-list">
+                                <li class="payment-item">
+                                    <img src="./img/visa.svg" alt="">
+                                </li>
+                                <li class="payment-item">
+                                    <img src="./img/mastercard.svg" alt="">
+                                </li>
+                                <li class="payment-item">
+                                    <img src="./img/maestro.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="footer-text">
+                            МКК ООО «Бустра» не привлекает денежные средства физических лиц, в том числе индивидуальных предпринимателей, не являющихся учредителями организации МКК ООО «Бустра», номер в реестре МФО 1703336008323
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-content--desktop">
+                    <div class="footer-left">
+                        <img src="./img/logo-big.svg" alt="">
+                        <p>
+                            МКК ООО «Бустра» не привлекает денежные 
+                            средства физических лиц, 
+                            в том числе индивидуальных предпринимателей, 
+                            не являющихся учредителями организации МКК ООО «Бустра», 
+                            номер в реестре МФО 1703336008323
+                        </p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="desktop-footer-nav">
+                            <li class="desktop-footer-nav--item">
+                                <a class="desktop-footer-nav--link" href="">Информация</a>
+                            </li>
+                            <li class="desktop-footer-nav--item">
+                                <a class="desktop-footer-nav--link" href="">Документы</a>
+                            </li>
+                            <li class="desktop-footer-nav--item">
+                                <a class="desktop-footer-nav--link" href="">COVID-19 поддержка клиентов</a>
+                            </li>
+                            <li class="desktop-footer-nav--item">
+                                <a class="desktop-footer-nav--link" href="">Контакты</a>
+                            </li>
+                            <li class="desktop-footer-nav--item">
+                                <a class="desktop-footer-nav--link" href="">Войти в линчный кабинет</a>
+                            </li>
+                        </ul>
+                        <div class="desktop-footer-block">
+                            <div class="payment-methods">
+                                <img src="./img/visa.svg" alt="">
+                                <img src="./img/maestro.svg" alt="">
+                                <img src="./img/mastercard.svg" alt="">
+                            </div>
+                            <div class="desktop-footer-promo">
+                                <div class="desktop-footer-promo-left">
+                                    <img src="./img/logo-mini.svg" alt="">
+                                    <p>
+                                        Получите деньги еще быстрее
+                                        в нашем приложении. Скоро.
+                                    </p>
+                                </div>
+                                <div class="desktop-footer-promo-right">
+                                    <img src="./img/playmarket.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

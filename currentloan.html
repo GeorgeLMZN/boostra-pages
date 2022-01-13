@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/new.css">
+    <title>Текущий заем</title>
+</head>
+<body class="bg-mobile--gray">
+    <!-- Страница текущего займа ЛК (займ есть) -->
+    <div class="container">
+        <div class="content">
+        <!--Сайдбар для десктопной версии-->
+       <div class="sidebar">
+            <ul class="sidebar--list">
+                <li class="sidebar-li">
+                    <a href="#" class="sidebar--link active">Текущий заем</a>
+                </li>
+                <li class="sidebar-li">
+                    <a href="#" class="sidebar--link">История займов</a>
+                </li>
+                <li class="sidebar-li">
+                    <a href="#" class="sidebar--link">Мои заявки</a>
+                </li>
+                <li class="sidebar-li">
+                    <a href="#" class="sidebar--link">Мои файлы</a>
+                </li>
+                <li class="sidebar-li">
+                    <a href="#" class="sidebar--link">Документы</a>
+                </li>
+            </ul>
+        </div>
+        <!--Сайдбар для десктопной версии-->
+
+        <!--Страница текущего займа -->
+        <div class="middle-bar">
+            <div class="middle-bar--group">
+                <h2  class="heading-h2 desktop-heading">Текущий займ</h2>
+                <a href="#" class="mobile-link">
+                    <h2  class="heading-h2">Текущий займ</h2>
+                    <svg class="rotate-180" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L8.5 8.5L16 1" stroke="black" stroke-width="2"/>
+                    </svg>
+                </a>
+                <h2 class="loaner-name-h2">Коробейников Олег Михайлович</h2>
+                <!--Если займ есть выводим номер и ссылку на договор -->
+                <div class="loan--number">
+                    <span class="loan--number-text">Номер займа <a href="#" class="loan-number--link">647721-21097</a></span>
+                    <a href="#" class="btn btn-sm animated-button thar-four"><span>Смотреть договор</span></a> 
+                </div>
+                <!---->
+                <!--Если займа нет-->
+                <div class="loan--number">
+                    <span class="loan--number-text">Открытых займов не найдено</span>
+                </div>
+                <!---->
+            </div>
+            <!--Если займа нет выводим уведомление с минимальным платежом и т д-->
+            <div class="notion">
+                <p>
+                    Знаете ли вы, что: при регулярной оплате минимальных платежей в МФО ваша кредитная история становится луше, рейтинг доверия повышается, а значит кредитный лимит будет максимальным
+                </p>
+                <a href="#" class="btn btn-sm animated-button thar-four btn-green">
+                    <span>Минимальный платеж <span>2309</span> тыщ.</span>
+                </a> 
+            </div>
+            <!---->
+            <!--Если займа нет выводим баннер с предложением и т д -->
+            <div class="notion-banner">
+                <h2 class="notion-heading">Первый заём — бесплатно</h2>
+                <div class="notion-text">
+                    <div class="conditions">
+                        на срок до 7 дней 
+                        на сумму до 15 000 ₽
+                    </div>
+                    <div class="notion-item">
+                        <div class="notion-zero">0</div>
+                        <div class="notion-percent">%</div>
+                    </div>
+                </div>
+                <div class="part-orange"></div>
+            </div>
+            <a href="#" class="btn-full btn btn-sm animated-button thar-four btn-green">
+                <span>
+                    Заявка на займ
+                </span>
+            </a>
+            <h2 class="heading-h2 sub-tab-heading">Доступные карты</h2>
+            <div class="allowed-cards">
+                <ul class="cards-list">
+                    <li class="card--item">
+                        <div class="card">
+                            <div class="card-label">Номер карты</div>
+                            <div class="card-number">415482 ******5609</div>
+                        </div>
+                        <div class="autopayment">
+                            <div class="autopayment-label">Автоплатеж</div>
+                            <div class="autopayment-number">
+                                <label class="spin-label">
+                                    <input class="checkbox--invisible" type="checkbox">
+                                    <div class="checkbox--spin"></div>
+                                    <div class="spin-contollers">
+                                        <span class="on">Вкл</span>
+                                        <span class="off">Выкл</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> 
+            <!---->
+            <div class="loan-info">
+                <!--Если займ просрочен выводим заголовок -->
+                <h2 class="heading-h2 overtime-heading">Ваш заем просрочен!</h2>
+                <!---->
+                <div class="loan-info--table">
+                    <div class="table-line">
+                        <div class="line--name">Остаток основного долга:</div>
+                        <div class="line--value">2 295</div>
+                    </div>
+                    <div class="table-line">
+                        <div class="line--name">Остаток процентов</div>
+                        <div class="line--value">2 295</div>
+                    </div>
+                    <div class="table-line">
+                        <div class="line--name">Итого на сегодня</div>
+                        <div class="line--value">2 295</div>
+                    </div>
+                    <div class="table-line">
+                        <div class="line--name">Дата полного платежа</div>
+                        <div class="line--value">25.05.2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="tab--item">
+            <h2  class="heading-h2">История займов</h2>
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8.5 8.5L16 1" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <a href="#" class="tab--item">
+            <h2  class="heading-h2">Мои заявки</h2>
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8.5 8.5L16 1" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <a href="#" class="tab--item">
+            <h2  class="heading-h2">Мои файлы</h2>
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8.5 8.5L16 1" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <a href="#" class="tab--item">
+            <h2  class="heading-h2">Документы</h2>
+            <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L8.5 8.5L16 1" stroke="black" stroke-width="2"/>
+            </svg>
+        </a>
+        <a href="#" class="getout-link">
+            <h2  class="heading-h2">Выйти</h2>
+        </a>
+        </div>
+        <!---->
+        </div>
+    </div>
+    <!--Попапы -->
+    <!--Попап пролонгации-->
+    <div class="shadow-bg"></div>
+    <div class="popup-container">
+        <form class="popup">
+            <h3 class="popup-heading">
+                <div>Пролонгация по договору </div> 
+                <div> 64721-21097</div>
+            </h3>
+            <div class="popup-content">
+                <p>Сумма оплаты для пролонгации по договору <span> 64721-21097</span> составит:</p>
+                <div class="prolongation-sum">1 495.00 руб.</div>
+                <p>Нажимая кнопку “Принять” вы подтверждаете что ознакомились со следующим:</p>
+                <a href="#" class="loan-conditions">Заявление о пролонгации договора микрозайма</a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn-full btn btn-sm animated-button thar-four btn-green">
+                    Принять
+                </a>
+                <a href="#" class="btn-full btn btn-sm animated-button thar-four"><span>Отказаться</span></a>
+            </div>
+        </form>
+        <form class="popup popup-code">
+            <h3 class="popup-heading">
+                <div>На ваш телефон </div> 
+                <div> 7 927 266 66 68 </div>
+            </h3>
+            <div class="popup-content">
+                <p>было отправлено СМС сообщение с кодом для подтверждения полонгации</p>
+                <div class="code--input-wrapper">
+                    <input type="text" class="code-input" placeholder="- - - -" max="4">
+                </div>
+                <p>Повторно отправить код можно через <span>27</span> секунд</p>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn-full btn btn-sm animated-button thar-four btn-green">
+                    Поттвердить
+                </a>
+                <a href="#" class="btn-full btn btn-sm animated-button thar-four"><span>Назад</span></a>
+            </div>
+        </form>
+        <form class="popup popup-payment">
+            <div class="popup-content">
+                <p>Внимание, после оплаты дата возврата займа не изменится!</p>
+                <p>Во избежании возникновения просрочки и ухудшения вашей кредитной истории, пожалуйста убедитесь в том, что вы успеете погасить заем до 25.05.2021</p>
+                <p>Если вы хотите пролонгировать заем, воспользуйтесь кнопкой “Перенести дату возврата”</p>
+                <div class="code--input-wrapper">
+                    <input type="text" class="code-input" placeholder="- - - -" max="4">
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <a href="#" class="btn-full btn btn-sm animated-button thar-four btn-green">
+                    Оплатить
+                </a>
+            </div>
+        </form>
+        <div class="popup getout-of-debts">
+            <h3 class="popup-heading">
+                <div>Проблемы с долгами ?</div> 
+                <div class="text-red"> Их можно списать! </div>
+            </h3>
+            <div class="popup-content">
+                <form>
+                    <p>Заполните заявку и узнайте как это сделать</p>
+                    <div class="form-row">
+                        <input id="name" name="fio" type="text" class="step-form--input form--input" value="" success-percent="5" counted="false">
+                        <span class="step-label">ФИО</span>
+                        <span class="error-message">Разрешен ввод только кириллицы</span>
+                    </div>
+                    <div class="form-row">
+                        <input id="phone" name="phone" type="text" class="step-form--input form--input" success-percent="10" counted="false">
+                        <span class="error-message">Введите телефон в правильном формате</span>
+                        <span class="step-label">Мобильный телефон</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn-full btn btn-sm animated-button thar-four btn-green">
+                            Оплатить
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
