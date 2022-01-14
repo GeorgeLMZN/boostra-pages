@@ -182,6 +182,7 @@ class changeConditions {
         const daysCount = Math.ceil(difference / (1000 * 3600 * 24));
         const percentPerDay = (this.formatToNumber(sum) / 100) * daysCount;
 
+
         noDiscountSum.value = this.formatToNumber(sum) + (percentPerDay * +percent);
         discountSum.value = this.formatToNumber(sum) + (percentPerDay * +percentDiscount);
     }
@@ -556,9 +557,8 @@ if (label.length > 0) {
 
 
 //Калькулятор
-
 class Calculator {
-    constructor (amountElement, amountvalueElement, amountOptions, termElement, termvalueElement, termOptions, result, percentResult, percent2, controllRight, controllLeft, dateOutput) {
+    constructor (amountElement, amountvalueElement, amountOptions, termElement, termvalueElement, termOptions, result, percentResult, percentOfLoan ,controllRight,controllLeft, dateOutput) {
       this.amountElement = amountElement
       this.amountvalueElement = amountvalueElement
       this.amountOptions = amountOptions
@@ -567,12 +567,13 @@ class Calculator {
       this.termOptions = termOptions
       this.result = result
       this.percentResult = percentResult;
-      this.percent = percent2;
+      this.percent = 0;
       this.controllLeft = controllLeft;
       this.controllRight = controllRight;
       this.dateOutput = dateOutput;
     }
     init() {  
+      console.log(this.percent)
       this.termElement.setAttribute('min', this.termOptions.min);
       this.termElement.setAttribute('max', this.termOptions.max);
       this.amountElement.setAttribute('min', this.amountOptions.min);
@@ -672,9 +673,9 @@ class Calculator {
       let sum = sumpart.join('');
     
       valElem.value = sum;
-      console.log(this.percent)
+
       this.updateSlider(element, options);
-      this.countResult(this.amountElement.value, this.termElement.value, this.percent.textContent.trim());
+      this.countResult(this.amountElement.value, this.termElement.value, this.percent);
       this.getReturnDate(this.termElement.value);
     }
     handleUpdateDaysValue (element, valElem) {
@@ -752,15 +753,15 @@ class Calculator {
   
      element.style = 'background: linear-gradient(to right, #E5613E, #E5613E ' + percentage + '%, #000 ' + percentage + '%, #000 100%)';
     }
-    countResult(sum, days, percent2) {
+    countResult(sum, days, percent) {
         sum = +sum;
         days = +days;
-        percent2 = +percent2;
-        if(percent2 === 0) {
-            percent2 = 1;
+        percent = +percent;
+        if(percent === 0) {
+            percent = 1;
         }
         
-        let percentPerDay = sum/100 * percent2;
+        let percentPerDay = sum/100 * percent;
         let overPay = percentPerDay * days;
         let result = sum + overPay;
       
@@ -799,14 +800,14 @@ class Calculator {
       this.dateOutput.value = returnDate.toLocaleString('ru', options);
     }
 }
-  
+const calculatorElem = document.querySelector('.range'); 
 const amountElement = document.querySelector('.range .loan-amount')
 const amountvalueElement = document.querySelector('.range .loan-amount-value .count') 
 const termElement = document.querySelector('.range .loan-term')
 const termvalueElement = document.querySelector('.range .loan-term-value  .count') 
 const result = document.querySelectorAll('.count-sum')
 const percentResult = document.querySelector('.count-sum_percent');
-const percent2 = document.querySelector('.percent-count');
+const percentOfLoan = document.querySelector('.percent-count');
 const controllRight = document.querySelectorAll('.controll-right');
 const controllLeft = document.querySelectorAll('.controll-left');
 const dateOutput = document.querySelector('.result-date .date');
@@ -822,8 +823,62 @@ const termOptions = {
     max:  16,
     cur:  7
 }
+if(calculatorElem) {
+    const calculator = new Calculator (amountElement, amountvalueElement, amountOptions, termElement, termvalueElement, termOptions, result, percentResult ,percent, controllRight, controllLeft, dateOutput);
+    calculator.init()      
+}
 
+const smoothScroll = () => {
+    const links = document.querySelectorAll('a');
+    if(links) {
+        links.forEach((e) => {
+            const id = e.getAttribute('href')
+            if(id[0] === '#' && id[1]) {
+                const target = document.querySelector(id);
+                e.addEventListener('click', (evt) => {
+                    evt.preventDefault();
+                    e.scrollIntoView({behavior: 'smooth', block: 'start'})
+                })
+            }
+        })
+    }
+} 
+smoothScroll();
 
-const calculator = new Calculator (amountElement, amountvalueElement, amountOptions, termElement, termvalueElement, termOptions, result, percentResult ,percent, controllRight, controllLeft, dateOutput);
-calculator.init()
-      
+const openMenu = () => {
+    const openBtn = document.querySelector('.burger-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const menu = document.querySelector('.mobile-menu');
+  
+    openBtn.addEventListener('click', (e) => {
+            menu.classList.add('open');
+    })
+    closeBtn.addEventListener('click', (e) => {
+        menu.classList.remove('open');
+    })
+}
+
+openMenu();
+
+const openSelect = () => {
+    const select = document.querySelector('.select-input');
+    const selectInput = document.querySelector('.select-input input');
+    const arrow = document.querySelector('.arrow');
+    const options = document.querySelector('.options-list');
+    if(select) {
+        select.addEventListener('click', (e) => {
+            if(e.target.closest('.select-input')) {
+                options.classList.toggle('open');
+                arrow.classList.toggle('rotate-180')
+            }
+        })
+        options.addEventListener('click', (e) => {
+            if(e.target.classList.contains('options-list--item')) {
+                selectInput.value = e.target.textContent.trim();
+            }
+        })
+    }
+}
+
+openSelect();
+

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/new.css">
-    <title>Главная</title>
+    <title>Обратная связь</title>
 </head>
 <body>
-    <header class="header bg-gray header-main">
+    <header class="header bg-gray">
         <div class="container main-container">
             <div class="header-mobile">
                 <div class="header-mobile-left">
@@ -39,7 +39,7 @@
                     <a href="./currentloan.html" class="login-link">Войти в личный кабинет</a>
                     <ul class="mobile-list">
                         <li class="mobile-list--item"><a href="#" class="mobile-list-link">Партнёры</a></li>
-                        <li class="mobile-list--item"><a href="./info.html" class="mobile-list-link">Условия</a></li>
+                        <li class="mobile-list--item"><a href="#" class="mobile-list-link">Условия</a></li>
                         <li class="mobile-list--item"><a href="#" class="mobile-list-link">Контакты</a></li>
                     </ul>
                     <ul class="header-social">
@@ -94,10 +94,10 @@
                             <a href="#" class="header-nav-link">Партнёры</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="./info.html" class="header-nav-link">Условия</a>
+                            <a href="#" class="header-nav-link">Условия</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="./info.html#contacts" class="header-nav-link">Контакты</a>
+                            <a href="#" class="header-nav-link">Контакты</a>
                         </li>                    
                     </ul>
                 </div>
@@ -139,268 +139,36 @@
             </div>
         </div>
     </header>
-    <div class="section show-mobile-section  bg-gray">
-        <div class="container main-container">
-            <div class="notion-banner notion-main">
-                <h2 class="notion-heading">Первый заём — бесплатно</h2>
-                <div class="notion-text">
-                    <div class="conditions">
-                        на срок до 7 дней 
-                        на сумму до 15 000 ₽
-                    </div>
-                    <div class="notion-item">
-                        <div class="notion-zero">0</div>
-                        <div class="notion-percent">%</div>
-                    </div>
-                </div>
-                <div class="part-orange"></div>
-            </div>
-        </div>
-    </div>
-    <section class="section  bg-gray main-section">
-        <div class="container main-container">
-            <div class="main-wrapper">
-                <div class="main-hgroup">
-                    <h1 class="main-heading">
-                        <span class="first-part">Первый заём</span>
-                        <span class="second-part">под 0%</span>
-                        <span class="third-part">на 7 дней за регистрацию!*</span>
-                    </h1>
-                    <p class="main-hgroup-notion">
-                        * При условии полного погашения займа в срок. При повторном займе на сумму <b>до 15 000 ₽</b>, деньги выдаются <b>под 1% в день</b>
-                    </p>
-                    <a href="#promo" class="scroll-to">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="20.5" cy="20.5" r="20" stroke="#2C2B39"/>
-                            <path d="M20.5 11.5V26.5M20.5 26.5L25 22M20.5 26.5L16 22" stroke="#2C2B39"/>
-                        </svg>
-                        <span>Какие у нас займы</span>    
-                    </a>
-                </div>
-                <div class="boy-bg">
-                    <div class="boy-bg-image"></div>
-                </div>
-                <div class="form-wrapper">
-                    <form method="get" class="range" action="step1.html">
-                        <div class="form-group range__slider">
-                          <div class="loan-amount-value">
-                             <div class="action-name">Выберите сумму: </div>
-                             <div class="count-wrapper">
-                                <input type="text" class="count"></input>
-                                <span>₽</span>
-                             </div>
-                          </div>
-                          <div class="input-wrapper">
-                                <svg class="input-controll controll-left" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
-                                    <rect x="6" y="9" width="8" height="2" fill="white"/>
-                                </svg>
-        
-                
-                              <input class="loan-amount" name="amount" type="range" step="1">
-                              <svg class="input-controll controll-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
-                                    <path d="M6 9H14V11H6V9Z" fill="white"/>
-                                    <path d="M9 14L9 6L11 6L11 14H9Z" fill="white"/>
-                              </svg>
-        
-                          </div>
-                           <div class="min-max">
-                            <span class="min-value">1000</span>
-                            <span class="max-value">15000</span>
-                          </div>
-                        </div>
-                        <div class="form-group range__slider">
-                          <div class="loan-term-value">
-                             <div class="action-name">Выберите срок: </div>
-                             <div class="count-wrapper">
-                                <input style="" type="text" class="count"></input>
-                                <span>дней</span>
-                             </div>
-                          </div>
-                          <div class="input-wrapper">
-                          <svg class="input-controll controll-left" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
-                                    <rect x="6" y="9" width="8" height="2" fill="white"/>
-                                </svg>
-        
-                
-                                <input class="loan-term"  type="range" step="1" value="10">
-                              <svg class="input-controll controll-right" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="10" cy="10" r="10" fill="#24C350"/>
-                                    <path d="M6 9H14V11H6V9Z" fill="white"/>
-                                    <path d="M9 14L9 6L11 6L11 14H9Z" fill="white"/>
-                              </svg>
-                          </div>
-                          <div class="min-max">
-                            <span class="min-value">7</span>
-                            <span class="max-value">16</span>
-                          </div>
-                        </div>
-                        <div class="result-section">
-                          <div class="loan-sum">
-                             <p>Занимаете:</p>
-                             <span class="sum-count">
-                                 <b>
-                                 <span class="count-sum">1 000 </span> 
-                                 </b>
-                                    <span class="symbol">₽</span> 
-                             </span>
-                          </div>
-                          <div class="result-date">
-                            <p>Сроком до:</p>
-                            <input style="max-width: 80px" class="date" name="period" readonly value="15 сентября"/>
-                          </div>
-                          <div class="return-amount">
-                              <p>Вернуть:</p>
-                              <div>
-                                <div class="sum">
-                                  <div class="no-discount-sum">
-                                    <span class="count-sum_percent">1070</span> 
-                                    <span class="symbol">₽</span> 
-                                  </div>
-                                  <div class="discount-sum">
-                                    <span class="count-sum">1000</span> 
-                                    <span class="symbol">₽</span> 
-                                  </div>
-                                   <div class="percent"><span class="percent-count">0</span><span class="symbol">%</span> </div>
-                                </div>
-                              
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group border-group">
-                            <button type="submit" class="mobile-submit-btn btn-submit btn _orange text-white border-round no-border">
-                              Получить бесплатно
-                            </button>
-                            <span class="promotion">
-                              Одобряем 98% заявок при оформлении займа через госуслуги
-                            </span>
-                        </div>
-                       <div class="form-group qa-group">
-                            <a href="https://www.boostra.ru/files/docs/zaim_0.pdf" class="qa-link text-underline">
-                              Положение Акции со скидкой 100% для новых клиентов
-                            </a>
-                            <a href="#" class="qa-link text-underline">
-                              А что если я не успеваю вернуть деньги вовремя
-                            </a>
-                        </div>
-                      </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="section">
         <div class="container main-container">
-            <h2 class="section-heading">Как это работает</h2>
-            <ul class="how-to--items">
-                <li class="how-to--item">
-                    <div class="icon-wrapper">
-                        <img src="./img/doc.svg" alt="">
-                    </div>
-                    <div class="how-to--text">
-                        <h3>Оформите заявку</h3>
-                        <p>У вас это займет не более 10 минут</p>
-                    </div>
-                </li>
-                <li class="how-to--item">
-                    <div class="icon-wrapper">
-                        <img src="./img/time.svg" alt="">
-                    </div>
-                    <div class="how-to--text">
-                        <h3>Дождитесь ответа</h3>
-                        <p>Мы дадим ответ в течение 5 минут</p>
-                    </div>
-                </li>
-                <li class="how-to--item">
-                    <div class="icon-wrapper">
-                        <img src="./img/money.svg" alt="">
-                    </div>
-                    <div class="how-to--text">
-                        <h3>Мгновенное получение денег</h3>
-                        <p>На банковскую карту</p>
-                    </div>
-                </li>
-                <li class="how-to--item readmore-item">
-                    <p>
-                      <b>Займы онлайн </b> — это аналог кредита от 1 000 до 15 000 рублей, на срок до 16 дней, 
-                      c процентной ставкой от 0,00% до 1% в день, с проведением всей сделки удаленно через интернет. 
-                      Деньги заемщик получает мгновенно после одобрения заявки, которая подается онлайн. Займы выдают 
-                      Деньги заемщик получает мгновенно после одобрения заявки, которая подается онлайн. Займы выдают 
-                    </p>
-                    <div class="bottom-bar">
-                        <a href=""> 
-                            Читать до конца 
-                            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.5L6.5 6L12 0.5" stroke="#E5613E"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="section bg-gray">
-        <div class="container main-container">
-            <div id="promo" class="notion-banner notion-middle">
-                <h2 class="notion-heading">Первый заём — бесплатно</h2>
-                <div class="notion-text">
-                    <div class="conditions">
-                        на срок до 7 дней |
-                        на сумму до 15 000 ₽
-                    </div>
-                    <div class="notion-item">
-                        <div class="notion-zero">0</div>
-                        <div class="notion-percent">%</div>
+            <h1 class="heading--form">Обратная связь</h1>
+            <form class="step-form"  style="margin-top: 20px;">
+                <div class="form-row">
+                    <input id="phone" name="phone" type="text" class="step-form--input form--input" success-percent="10" counted="false">
+                    <span class="error-message">Введите телефон в правильном формате</span>
+                    <span class="step-label">Мобильный телефон</span>
+                </div>
+                <div class="form-row">
+                    <input id="email" name="phone" type="text" class="step-form--input form--input" success-percent="10" counted="false">
+                    <span class="error-message">Введите почту в правильном формате</span>
+                    <span class="step-label">Электронная почта</span>
+                </div>
+                <h2 class="form-sub-heading">Выберете тему обращения</h2>
+                <div class="form-row select-input">
+                    <input id="theme" name="theme" type="text" class="step-form--input form--input" success-percent="10" counted="false" disabled placeholder="Значение не выбрано">
+                    <div class="arrow rotate-180"></div>
+                    <div class="select-options">
+                        <ul class="options-list">
+                            <li class="options-list--item">Обращение по стах. и ком.</li>
+                            <li class="options-list--item">Проблемы с сайтом и личным кабинетом</li>
+                            <li class="options-list--item">Запрос справок</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="btn-block">
-                    <button type="submit" class="mobile-submit-btn btn-submit btn _orange text-white border-round no-border" data-dashlane-rid="435bbf1707935501" data-dashlane-label="true" data-form-type="action">
-                        Получить бесплатно
-                    </button>
-                    <span>* Доступно только для первого займа</span>
-                </div>
-                <div class="part-orange"></div>
-            </div>
-            <form action="step1.html" class="btn-block1">
-                <button class="btn-submit mobile-submit-btn">Получить бесплатно</button>
-                <p class="text-notion">*Доступно только для первого займа</p>
+                <h2 class="form-sub-heading">Ваше обращение</h2>
+                <textarea rows="15" wrap="hard" class="feedback-text" id="feedbackContent" name="feedbackContent" placeholder="Ваше обращение"></textarea>
+                <button class="btn-submit">Отправить</button>
             </form>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container main-container">
-            <p class="question-text">
-                Оформить заём можно круглосуточно, в выходные и праздники. 
-                Подать заявку вы можете не только с компьютера, 
-                но и с любого мобильного устройства
-            </p>
-            <ul class="question-list">
-                <li class="question-item">
-                    <a href="#">
-                        <span>Как получать на карту</span>
-                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
-                        </svg>    
-                    </a>
-                </li>
-                <li class="question-item">
-                    <a href="#">
-                        <span>Какие документы нужны</span>
-                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
-                        </svg>   
-                    </a>
-                </li>
-                <li class="question-item">
-                    <a href="#">
-                        <span>Какие еще требования к заёмщику</span>
-                        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.8536 4.35355C22.0488 4.15829 22.0488 3.84171 21.8536 3.64645L18.6716 0.464466C18.4763 0.269204 18.1597 0.269204 17.9645 0.464466C17.7692 0.659728 17.7692 0.976311 17.9645 1.17157L20.7929 4L17.9645 6.82843C17.7692 7.02369 17.7692 7.34027 17.9645 7.53553C18.1597 7.7308 18.4763 7.7308 18.6716 7.53553L21.8536 4.35355ZM0 4.5H21.5V3.5H0V4.5Z" fill="#454B60"/>
-                        </svg>   
-                    </a>
-                </li>
-            </ul>
         </div>
     </section>
     <footer class="footer bg-gray">
@@ -512,7 +280,19 @@
             </div>
         </section>
     </footer>
+    <div class="shadow-bg"></div>
+    <div class="popup success-popup">
+        <div class="close-btn">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.293079 0.292893C0.683603 -0.0976311 1.31677 -0.0976311 1.70729 0.292893L16.5565 15.1421C16.9471 15.5327 16.9471 16.1658 16.5565 16.5563C16.166 16.9469 15.5328 16.9469 15.1423 16.5563L0.293079 1.70711C-0.0974453 1.31658 -0.0974452 0.683417 0.293079 0.292893Z" fill="#282735"/>
+                <path d="M16.5563 0.292893C16.1658 -0.0976311 15.5327 -0.0976311 15.1421 0.292893L0.292893 15.1421C-0.0976311 15.5327 -0.0976311 16.1658 0.292893 16.5563C0.683417 16.9469 1.31658 16.9469 1.70711 16.5563L16.5563 1.70711C16.9469 1.31658 16.9469 0.683417 16.5563 0.292893Z" fill="#282735"/>
+            </svg>
+                
+        </div>
+        <div class="success-popup-body">
+            Ваше обращение <br> успешно отправлено!
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
-
 </html>

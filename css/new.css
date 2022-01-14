@@ -30,6 +30,9 @@ li {
 a {
     text-decoration: none;
 }
+button, a {
+    cursor: pointer;
+}
 p,h1,h2,h3,h4,h5,h6 {
     margin:0;
 }
@@ -38,7 +41,10 @@ p,h1,h2,h3,h4,h5,h6 {
 }
 .bg-gray {
     background-color: #F4F5F7;
+    height: 100%;
+    width: 100%;
 }
+
 /*Шикардясные кнопки*/
 .btn {
     font-family: 'Gilroy-Thin';
@@ -142,6 +148,58 @@ a.animated-button.btn-green.thar-four:before {
 }
 
 @media screen and (min-width: 100px) {
+    .mobile-menu {
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        display: block;
+        box-sizing: border-box;
+        padding: 14px 16px 20px 16px;
+        transform: translateY(-100%);
+        transition: all .5s;
+    }
+    .mobile-list-link {
+        color: #000;
+        font-size: 30px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .login-link {
+        margin-top: 36px;
+        color: #E5613E;
+        text-decoration: underline;
+        font-size: 16px;
+        font-family: 'Gilroy-Bold';
+        display: block;
+    }
+    .mobile-list {
+        margin-top: 32px;
+    }
+    .mobile-menu .header-social {
+        display: flex;
+        margin-top: 60px;
+    }
+    .mobile-menu .header-social li:nth-child(2) {
+        margin: 0 20px;
+    }
+    .mobile-menu .footer-promo {
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+    .mobile-menu-top {
+        display: flex;
+        align-items: center;
+    }
+    .mobile-menu--logo {
+        margin-left: 33px;
+    }
+    .mobile-menu.open {
+        transform: translateY(0%);
+        transition: transform .5s;
+    }
     .header-desktop {
         display: none;
     }
@@ -172,6 +230,9 @@ a.animated-button.btn-green.thar-four:before {
         padding: 5px;
         position: relative;
     }
+    .show-mobile-section .container {
+        padding: 0 5px;
+    }
     .text-underline {
         text-decoration: underline;
     }
@@ -199,6 +260,7 @@ a.animated-button.btn-green.thar-four:before {
     /*Акция*/
     .notion-banner.notion-middle {
         display: none;
+        margin: 20px 0;
     }
     .notion-banner.notion-main {
         margin-top: 0;
@@ -206,8 +268,17 @@ a.animated-button.btn-green.thar-four:before {
     /*Заголовок секции*/
     .section-heading {
         font-family: 'Gilroy-Bold';
+        margin-top: 30px;
     }
     /* Калькулятор */
+    .form-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+    .form-group.border-group .promotion {
+        display: block;
+        margin-top: 10px;
+    }
     .qa-group a {
         text-decoration: underline dashed;
     }
@@ -329,6 +400,9 @@ a.animated-button.btn-green.thar-four:before {
           display: flex;
           justify-content: space-between;
           align-items: center;
+      }
+      .range .discount-sum .symbol {
+          margin-left: 10px;
       }
       
       /* custom thumb */
@@ -487,7 +561,7 @@ a.animated-button.btn-green.thar-four:before {
       }
       
       .info-container .info-item.loan-sum {
-        flex-direction: row;
+        flex-direction: column;
       }
       
       .result-date,
@@ -517,7 +591,7 @@ a.animated-button.btn-green.thar-four:before {
       
       .discount-sum,
       .no-discount-sum {
-        margin-right: 20px;
+        margin-right: 12px;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -537,14 +611,14 @@ a.animated-button.btn-green.thar-four:before {
       .symbol {
         font-size: 13px;
         margin-top: 2px;
-        margin-left: 4px;
+        margin-left: 0;
       }
       
       .discount-sum {
         color: #E5613E;
         font-weight: 900;
       }
-      
+     
       .return-amount p,
       .result-date p,
       .loan-sum p {
@@ -558,7 +632,7 @@ a.animated-button.btn-green.thar-four:before {
         margin: 20px 0;
         border-top: 1px solid #CACACA;
         border-bottom: 1px solid #CACACA;
-        padding: 30px 0 20px 0;
+        padding: 20px 0 20px 0;
         display: flex;
         flex-direction: column;
         display: none;
@@ -610,7 +684,7 @@ a.animated-button.btn-green.thar-four:before {
         position: relative;
       }
       .info-input.input-count {
-        max-width: 90px;
+        max-width:65px;
         font-family: 'Gilroy-Bold', sans-serif;
       }
       
@@ -623,6 +697,7 @@ a.animated-button.btn-green.thar-four:before {
         padding: 5px 10px;
         color: #fff;
         border-radius: 5px;
+        max-width: fit-content;
       }
       .date {
           border: none;
@@ -639,6 +714,7 @@ a.animated-button.btn-green.thar-four:before {
     /*Как это работает*/  
     .how-to--item {
         display: flex;
+        align-items: center;
         background: #F4F5F7;
         padding: 10px 20px;
         margin-bottom: 15px;
@@ -647,7 +723,15 @@ a.animated-button.btn-green.thar-four:before {
     }
     .how-to--text {
         margin-left: 20px;
+        min-height: 70px;
     }
+    .how-to--text h3{
+        font-size: 18px;
+    }
+    .how-to--text p{
+       margin-top: 15px;
+    }
+
     .how-to--item.readmore-item {
         max-height: 180px;
         overflow: hidden;
@@ -704,6 +788,9 @@ a.animated-button.btn-green.thar-four:before {
     .question-text {
         color: #454B60;
         text-align: center;
+        max-width: 800px;
+        margin: 20px auto;
+        margin-bottom: 50px;
     }
     .question-item {
       
@@ -888,9 +975,6 @@ a.animated-button.btn-green.thar-four:before {
         justify-content: center;
     }
     /*Заголовки формы*/
-    .form-hgroup {
-        margin-top: 36px;
-    }
     .heading--form {
         margin: 0;
         max-width: 310px;
@@ -1172,6 +1256,7 @@ a.animated-button.btn-green.thar-four:before {
       /*Личный кабинет текущий заём*/
       .rotate-180 {
           transform: rotate(180deg);
+          transition: transform .5s;
       }
       .bg-mobile--gray {
           background-color: #F5F5F5;
@@ -1549,6 +1634,30 @@ a.animated-button.btn-green.thar-four:before {
             justify-content: center;
             text-decoration: underline;
         }
+        .success-popup {
+            background: #fff;
+            opacity: 1;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            display: none;
+        }
+        .success-popup.visible {
+            display: flex;
+        }
+        .success-popup-body {
+            height: 100%;
+            color: #21CA50;
+            font-size: 40px;
+            text-align: center;
+        }
+        .success-popup .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
         /*История займов*/
         .loan-history--item {
             display: flex;
@@ -1645,7 +1754,114 @@ a.animated-button.btn-green.thar-four:before {
             text-decoration: underline;
             margin-left: 10px;
         }
-
+        /*Селект инпут*/
+        .select-input {
+            position: relative;
+        }
+        .select-input input {
+            position: relative;
+        }
+        .select-input input::placeholder {
+            color:#D8D8D8;
+            font-family: "Gilroy";
+            font-size: 18px;
+        }
+        .select-input textarea::placeholder {
+            color:#D8D8D8;
+            font-family: "Gilroy";
+            font-size: 18px;
+        }
+        .select-input .arrow {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            background-image: url(../img/selectArrow.svg);
+            bottom: 10px;
+            right: 10px;
+            transition: transform .5s;
+        }
+        .options-list {
+            position: absolute;
+            width: 100%;
+            right: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            top: 60px;
+            border: 1px solid #D8D8D8;
+            background: #fff;
+            z-index: 1;
+            border-radius: 10px;
+            display: none
+        }
+        .options-list.open {
+            display: block;
+        }
+        .options-list--item {
+            margin-bottom: 20px;
+            color: #454B60;
+            cursor: pointer;
+        }
+        .options-list--item:first-child {
+            margin-top: 10px;
+            color: #454B60;
+        }
+        .options-list--item:last-child {
+            margin-bottom: 10px;
+            color: #454B60;
+        }
+        .form-sub-heading {
+            padding: 10px 0;
+        }
+        .feedback-text {
+            width: 100%;
+            border: 1px solid #D8D8D8;
+            border-radius: 10px;
+            resize: none;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+            font-size: 16px;
+        }
+        /* Инфо страница */
+        .sub-info-heading {
+            margin-top: 30px;
+        }
+        .info-p {
+            margin-top: 20px;
+            line-height: 30px;
+        }
+        .demads-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-top: 20px;
+        }
+        .demands-list--item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-basis: 45%;
+        }
+        .documents-list--item a{
+            display: flex;
+            color: #282735;
+            align-items: center;
+            text-decoration: underline;
+        }
+        .documents-list--item a{
+            display: flex;
+            color: #282735;
+            align-items: center;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        .documents-list--item a span{
+            margin-left: 10px;
+        }
 }
 @media screen and (min-width: 375px) {
     /*Верхняя панель на форме регистрациии , где меняем данные и условия займа*/
@@ -1683,6 +1899,9 @@ a.animated-button.btn-green.thar-four:before {
     }
 }
 @media screen and (min-width: 414px) {
+    .show-mobile-section .container.container.main-container {
+        padding: 0 16px;
+    }
      /*Верхняя панель на форме регистрациии , где меняем данные и условия займа*/
      .container {
         padding: 14px 16px 20px 16px;
@@ -1769,6 +1988,7 @@ a.animated-button.btn-green.thar-four:before {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 50px;
     }
     .how-to--item {
         flex-basis: 49%;
@@ -1802,6 +2022,7 @@ a.animated-button.btn-green.thar-four:before {
 
     .loan-return svg {
         padding: 12px 0;
+        margin-left: 5px;
     }
 
     .discount-sum,
@@ -1951,6 +2172,7 @@ a.animated-button.btn-green.thar-four:before {
         background-image: url(/img/bg-logo.svg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position:  bottom center;
         position: relative;
     }
     .main-hgroup {
@@ -1982,7 +2204,7 @@ a.animated-button.btn-green.thar-four:before {
     .main-hgroup-notion {
         color: #fff;
         margin-top: 50px;
-        max-width: 500px;
+        max-width: 425px;
     }
     .main-hgroup-notion b {
         color: #000;
@@ -1990,9 +2212,6 @@ a.animated-button.btn-green.thar-four:before {
     }
     .sum {
         margin-top: -15px;
-    }
-    .boy-bg {
-        display: block;
     }
     .scroll-to {
         display: flex;
@@ -2052,6 +2271,10 @@ a.animated-button.btn-green.thar-four:before {
     .question-item:last-child {
         flex-basis: 39%;
     }
+    /*Калькулятор*/
+    .result-section .return-amount {
+        flex-basis: 100% !important;
+    }
     /*Футер*/
     .footer-content--mobile {
         display: none;
@@ -2104,6 +2327,7 @@ a.animated-button.btn-green.thar-four:before {
     .desktop-footer-nav--item:last-child .desktop-footer-nav--link {
         color: #E5613E;
         text-decoration: underline;
+        font-family: 'Gilroy-Bold';
     }
      /*Верхняя панель на форме регистрациии , где меняем данные и условия займа*/
 
@@ -2156,17 +2380,70 @@ a.animated-button.btn-green.thar-four:before {
     .user-file--item {
         margin-right: 5px;
     }
+    /*Инфо страница*/
+    .demands-list--item {
+        margin-right: 50px;
+    }
 
 }
 @media screen and (min-width: 1280px) {
     /*Главная страница*/
+    .mobile-menu {
+        display: none;
+    }
+    .main-section {
+        width: 100%;
+        background-size: cover;
+        padding-top: 200px;
+        margin-top: -200px;
+        position: relative;
+        z-index: 0;
+    }
+    .wa-link {
+        margin: 0 20px;
+    }
+    .header-contacts {
+        margin: 0 50px;
+        font-size: 20px;
+    }
+    .header-contacts a {
+        color: #FFF;
+        text-decoration: underline;
+        font-size: 25px;
+    }
+    .login-btn {
+        background:#2C2B39;
+        color: #fff;
+        font-family: 'Gilroy-Bold';
+        padding: 12px 35px;
+        box-sizing:border-box ;
+        display: block;
+        border-radius: 50px;
+    }
+
+    .range {
+        margin-bottom: -50px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .header.header-main {
+        background-color: transparent;
+    }
+    .header {
+        position: relative;
+        z-index: 1;
+        background-color: #21CA50;
+        background-image: url(../img/bg-logo.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
     .header-mobile {
         display: none;
     }
     .header-desktop {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 30px;
     }
     .header-left {
         display: flex;
@@ -2181,7 +2458,6 @@ a.animated-button.btn-green.thar-four:before {
     }
     .main-section {
         position: relative;
-        overflow: hidden;
     }
     .header-social {
         display: flex;
@@ -2192,22 +2468,28 @@ a.animated-button.btn-green.thar-four:before {
     }
     .header-right {
         display: flex;
+        align-items: flex-start;
     }
     .header-contacts {
         text-align: right;
     }
     .boy-bg {
+        display: block;
+        overflow: hidden;
         left: 50%;
         transform: translateX(-50%);
-        width: 1000px;
+        width: 700px;
         height: 600px;
-        background: url(../img/boy.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-bottom: -25px;
-        background-position: bottom center;
         position: absolute;
         bottom: 0;
+    }
+    .boy-bg-image {
+        width: 100%;
+        height: 100%;
+        background: url(../img/boy.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
     }
     .range {
         position: relative;
@@ -2259,16 +2541,33 @@ a.animated-button.btn-green.thar-four:before {
         margin-right: 10px;
     }
     .footer-right {
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     /**/
     .notion-banner.notion-middle {
         max-width:none;
-        padding: 50px 100px;
+        padding: 50px 80px;
     }
     .notion-banner.notion-middle .conditions {
-        margin-top: 50px;
+        margin-top: 0px;
+    }
+    .notion-banner.notion-middle .notion-text {
+        margin: 0;
+    }
+    .notion-banner.notion-middle .notion-zero {
+       font-size: 230px;
+    }
+    .notion-banner.notion-middle .notion-percent {
+        font-size: 70px;
+     }
+    /*Промо в футере*/
+    .desktop-footer-promo {
+        max-width: 600px;
+    }
+    .desktop-footer-promo-left p {
+        margin-left: 10px;
     }
     /*Hover для кнопок*/
     a.animated-button.thar-four:hover {
@@ -2288,6 +2587,13 @@ a.animated-button.btn-green.thar-four:before {
         background-color: transparent;
         border: 1px solid #E5613E;
     }
+    /*Hovers*/
+    .desktop-menu--link:hover svg path {
+        fill: #000;
+        transition: all .5s;
+    }
+
+
      /*Верхняя панель на форме регистрациии , где меняем данные и условия займа*/
     .info-container {
         justify-content: flex-start;
@@ -2301,6 +2607,7 @@ a.animated-button.btn-green.thar-four:before {
     .discount-sum,
     .no-discount-sum {
         margin-right: 15px;
+        max-width: 60px;
     }
 
     .wrapper {
@@ -2311,10 +2618,12 @@ a.animated-button.btn-green.thar-four:before {
     .info-item {
         flex-basis: auto;
         padding-left: 16px;
+
     }
 
     .info-item:first-child {
         padding-left: 0;
+        flex-direction: row !important;
     }
 
     .info-item.loan-return {
@@ -2379,6 +2688,47 @@ a.animated-button.btn-green.thar-four:before {
     }
 }
 @media screen and (min-width: 1600px) {
+    .container.main-container {
+        max-width: 1400px;
+    }
+    .range {
+        margin-right: 55px;
+    }
+    .main-hgroup-notion {
+        max-width: 480px;
+    }
+    .part-orange {
+        width: 430px;
+        height: 900px;
+        top: -50px;
+    }
+    .notion-banner.notion-middle {
+        max-width: none;
+        padding: 50px 130px;
+    }
+    .notion-banner.notion-middle .notion-text {
+        margin-top: 0;
+    }
+    .notion-banner.notion-middle .notion-zero {
+        font-size: 250px;
+    }
+    .notion-banner.notion-middle .notion-percent {
+        font-size: 80px;
+    }
+    .notion-banner.notion-middle .conditions {
+        margin: 0;
+        font-size: 35px;
+    }
+    .footer {
+        padding-top: 20px;
+    }
+    .footer-right {
+        width: 60%;
+    } 
+    .desktop-footer-block {
+        width: 100%;
+        justify-content: space-between;
+    }
    /* Личный кабинет текущий заём сайдбар для десктопа */
    .sidebar {
         width: 300px;
@@ -2389,6 +2739,29 @@ a.animated-button.btn-green.thar-four:before {
         margin-left: 80px;
     }
 }
+@media screen and (min-width: 1700px) {
+    .container.main-container {
+        max-width: 1500px;
+    }
+    .range {
+        margin-right: 105px;
+    }
+    .main-hgroup-notion {
+        max-width: 600px;
+    } 
+}
+@media screen and (min-width: 1800px) {
+    .container.main-container {
+        max-width: 1600px;
+    }
+    .range {
+        margin-right: 125px;
+    }
+    .notion-banner.notion-middle {
+        padding: 50px 200px;
+    }
+}
+
 
 @media screen and (min-width: 1920px) {
      /*Верхняя панель на форме регистрациии , где меняем данные и условия займа*/
@@ -2399,5 +2772,8 @@ a.animated-button.btn-green.thar-four:before {
     .discount-sum,
     .no-discount-sum {
         margin-right: 15px;
+    }
+    .range {
+        margin-right: 145px;
     }
 }
