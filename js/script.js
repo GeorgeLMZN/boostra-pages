@@ -573,7 +573,6 @@ class Calculator {
       this.dateOutput = dateOutput;
     }
     init() {  
-      console.log(this.percent)
       this.termElement.setAttribute('min', this.termOptions.min);
       this.termElement.setAttribute('max', this.termOptions.max);
       this.amountElement.setAttribute('min', this.amountOptions.min);

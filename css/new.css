@@ -215,6 +215,7 @@ a.animated-button.btn-green.thar-four:before {
     body {
         margin: 0;
         font-family: "Gilroy";
+        overflow-x: hidden;
     }
 
     input:focus {
@@ -229,6 +230,7 @@ a.animated-button.btn-green.thar-four:before {
         margin: 0 auto;
         padding: 5px;
         position: relative;
+        box-sizing: border-box;
     }
     .show-mobile-section .container {
         padding: 0 5px;
@@ -586,7 +588,7 @@ a.animated-button.btn-green.thar-four:before {
         display: flex;
         align-items: center;
         white-space: nowrap;
-        margin-left: 10px;
+        margin-left: 5px;
       }
       
       .discount-sum,
@@ -1989,6 +1991,7 @@ a.animated-button.btn-green.thar-four:before {
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 50px;
+        z-index: 0;
     }
     .how-to--item {
         flex-basis: 49%;
@@ -2154,6 +2157,15 @@ a.animated-button.btn-green.thar-four:before {
         max-width: 350px;
         margin-bottom: 10px;
     }
+    /*Первый контейнер на информационной странице*/
+    .first-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    /*Иконки требований к заёмщику*/
+    .demands-list--item {
+        flex-basis: 20%;
+    }
 }
 @media screen and (min-width: 1024px) {
     /*Главная страница*/
@@ -2174,6 +2186,7 @@ a.animated-button.btn-green.thar-four:before {
         background-size: cover;
         background-position:  bottom center;
         position: relative;
+        z-index: 1;
     }
     .main-hgroup {
         display: block;
@@ -2388,6 +2401,24 @@ a.animated-button.btn-green.thar-four:before {
 }
 @media screen and (min-width: 1280px) {
     /*Главная страница*/
+    .first-part {
+        opacity: 0;
+    }
+    .second-part {
+       opacity: 0;
+    }
+    .third-part {
+        opacity: 0;
+    }
+    .main-hgroup-notion {
+        color: #fff;
+        margin-top: 50px;
+        max-width: 425px;
+        opacity: 0;
+    }
+    .scroll-to {
+       opacity: 0;
+    }
     .mobile-menu {
         display: none;
     }
@@ -2424,9 +2455,11 @@ a.animated-button.btn-green.thar-four:before {
     .range {
         margin-bottom: -50px;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
     }
     .header.header-main {
         background-color: transparent;
+        background-image: none;
     }
     .header {
         position: relative;
@@ -2445,6 +2478,9 @@ a.animated-button.btn-green.thar-four:before {
         align-items: flex-start;
         padding-top: 30px;
     }
+    .header-desktop--main {
+        opacity: 0;
+    }
     .header-left {
         display: flex;
         flex-direction: column;
@@ -2458,6 +2494,11 @@ a.animated-button.btn-green.thar-four:before {
     }
     .main-section {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
     }
     .header-social {
         display: flex;
@@ -2479,17 +2520,34 @@ a.animated-button.btn-green.thar-four:before {
         left: 50%;
         transform: translateX(-50%);
         width: 700px;
-        height: 600px;
+        height: 900px;
         position: absolute;
         bottom: 0;
     }
     .boy-bg-image {
         width: 100%;
         height: 100%;
+        position: absolute;
+    }
+    #boy1 {
         background: url(../img/boy.svg);
         background-repeat: no-repeat;
         background-position: bottom center;
         background-size: contain;
+    }
+    #boy2 {
+        background: url(../img/boy2.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        opacity: 0;
+    }
+    #boy3 {
+        background: url(../img/boy3.svg);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        opacity: 0;
     }
     .range {
         position: relative;
@@ -2687,10 +2745,31 @@ a.animated-button.btn-green.thar-four:before {
         max-width: none;
     }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
+    .container.main-container {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .container.main-container {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .container.main-container {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+@media screen and (min-width: 1500px) {
     .container.main-container {
         max-width: 1400px;
+        min-width: 1400px;
     }
+}
+@media screen and (min-width: 1600px) {
     .range {
         margin-right: 55px;
     }
@@ -2741,17 +2820,19 @@ a.animated-button.btn-green.thar-four:before {
 }
 @media screen and (min-width: 1700px) {
     .container.main-container {
+        min-width: 1500px;
         max-width: 1500px;
     }
     .range {
         margin-right: 105px;
     }
     .main-hgroup-notion {
-        max-width: 600px;
+        max-width: 550px;
     } 
 }
 @media screen and (min-width: 1800px) {
     .container.main-container {
+        min-width: 1600px;
         max-width: 1600px;
     }
     .range {
@@ -2774,6 +2855,6 @@ a.animated-button.btn-green.thar-four:before {
         margin-right: 15px;
     }
     .range {
-        margin-right: 145px;
+        margin-right: 110px;
     }
 }
