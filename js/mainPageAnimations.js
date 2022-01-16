@@ -53,6 +53,7 @@ function anim (height) {
         });
 
         tl5.fromTo('.question-list', {x: -500, opacity: 0}, {x: 0, opacity: 1, duration: 1})
+            .fromTo('#footer-content--desktop-main', {y: 500, opacity: 0}, {y: 0, opacity: 1, duration: 1}, -0.5)
     }else{
         return;
     }
