@@ -1,8 +1,9 @@
 const section = document.querySelector('.main-section');
-
 const height = section.offsetHeight;
+if(window.innerWidth > 1200) {
+    section.style.height = window.innerHeight + 20 + 'px';
+}
 
-section.style.height = window.innerHeight + 20 + 'px';
 function anim (height) {
     if(window.innerWidth > 1200) {
         setTimeout(() => {

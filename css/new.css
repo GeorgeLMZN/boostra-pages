@@ -2179,6 +2179,9 @@ a.animated-button.btn-green.thar-four:before {
     .main-heading span {
         display: block;
     }
+    .section {
+        overflow: hidden;
+    }
     .main-section {
         background-color: #21CA50;
         background-image: url(/img/bg-logo.svg);
@@ -2187,6 +2190,7 @@ a.animated-button.btn-green.thar-four:before {
         background-position:  bottom center;
         position: relative;
         z-index: 1;
+        overflow: visible;
     }
     .main-hgroup {
         display: block;
